@@ -44,7 +44,7 @@ def move_absolute(bus, target_degrees, max_speed_dps=500):
     ## Actually sending the message to the motor
     msg = can.Message(arbitration_id=MOTOR_ID, data=data)
     bus.send(msg)
-    print(f"Sent move to {target_degrees}° (max {max_speed_dps} dps)")
+    print(f"Sent move to {target_degrees} deg (max {max_speed_dps} dps)")
 
 # Waiting for the servo to get to a certain angle
 def wait_for_target(bus, target_degrees, tolerance=2.0, timeout=10.0):
